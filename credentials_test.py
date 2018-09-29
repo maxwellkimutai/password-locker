@@ -21,4 +21,14 @@ class TestCredentials(unittest.TestCase):
             '''
             Credentials.credentials_list = []
 
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_account.account,"Facebook")
+        self.assertEqual(self.new_account.login,"kace")
+        self.assertEqual(self.new_account.password,"12345")
+        self.assertEqual(self.new_account.user,"maxwell")
+
     
