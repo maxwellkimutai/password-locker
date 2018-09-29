@@ -61,4 +61,17 @@ class TestCredentials(unittest.TestCase):
         '''
         self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
-    
+    def test_find_account(self):
+        '''
+        test_find_account to find an account based on the account name
+        '''
+        self.new_account.save_credential()
+        test_account = Credentials("Test","user","55555","maxwell") # new contact
+        test_account.save_credential()
+
+        found_account = Credentials.find_by_account("Test")
+
+        self.assertEqual(found_account.login,test_account.login)
+
+if __name__ == '__main__':
+    unittest.main()
