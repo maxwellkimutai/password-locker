@@ -55,4 +55,10 @@ class TestCredentials(unittest.TestCase):
         '''
         self.assertEqual(len(Credentials.generate_password()),10)
 
+    def test_display_all_credentials(self):
+        '''
+        method to display a list of all credentials
+        '''
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+
     
