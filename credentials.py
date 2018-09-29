@@ -49,4 +49,18 @@ class Credentials:
         '''
         return cls.credentials_list
 
-    
+    @classmethod
+    def find_by_account(cls,account):
+        '''
+        find_by_account method takes in an account name and returns all the accounts with that name
+
+        Args:
+            account: name of the account to search for
+
+        Returns:
+            Details of accounts with the account name
+        '''
+
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
