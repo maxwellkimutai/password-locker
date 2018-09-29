@@ -76,10 +76,12 @@ def main():
                     print(f"Your password is {password}")
                     break
                 elif response == "n":
+                    print("\n")
                     print("Enter a password: ")
                     password = input()
                     break
                 else:
+                    print("\n")
                     print("Invalid input. Please try again.")
 
             save_account(create_account(account,login,password,pl_user_name))
@@ -109,6 +111,7 @@ def main():
                             print('\n')
 
         elif selected_word == 'find':
+            print("\n")
             print("Enter the account name")
             acc_name = input()
 
