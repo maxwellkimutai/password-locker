@@ -31,4 +31,15 @@ class Credentials:
 
         Credentials.credentials_list.append(self)
 
+    @classmethod
+    def generate_password(cls):
+        '''
+        generate_password method generates a password for the new account
+        '''
+        chars = 'abcdefghijklmnopqrstuvwxyz1234567890'
+
+        password = ''.join(random.choice(chars) for _ in range(10))
+
+        return password
+
     
