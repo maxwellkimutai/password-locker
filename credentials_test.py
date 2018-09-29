@@ -39,4 +39,14 @@ class TestCredentials(unittest.TestCase):
         self.new_account.save_credential() # saving the new credential
         self.assertEqual(len(Credentials.credentials_list),1)
 
+    def test_save_multiple_credential(self):
+        '''
+        test_save_multiple_credential to check if we can save multiple contact
+        objects to our credentials_list
+        '''
+        self.new_account.save_credential()
+        test_account = Credentials("Test","user","55555","maxwell") # new contact
+        test_account.save_credential()
+        self.assertEqual(len(Credentials.credentials_list),2)
+
     
