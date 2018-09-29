@@ -24,4 +24,11 @@ class Credentials:
         self.password = password
         self.user = user
 
+    def save_credential(self):
+        '''
+        save_contact method saves credential objects into credentials_list
+        '''
+
+        Credentials.credentials_list.append(self)
+
     
