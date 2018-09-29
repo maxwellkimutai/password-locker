@@ -49,4 +49,10 @@ class TestCredentials(unittest.TestCase):
         test_account.save_credential()
         self.assertEqual(len(Credentials.credentials_list),2)
 
+    def test_generate_password_not_empty(self):
+        '''
+        test_generate_password_not_empty to check if the password is generated
+        '''
+        self.assertEqual(len(Credentials.generate_password()),10)
+
     
