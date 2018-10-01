@@ -24,7 +24,7 @@ The program lets the user choose whether to exit
 * Example input: exit
 * Example output: Thank you for using password locker
 
-##Presrequisites
+## Prerequisites
 * Python
 
 ## Setup/Installation Requirements
