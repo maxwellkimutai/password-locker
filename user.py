@@ -18,4 +18,8 @@ class User:
         self.username = username
         self.password = password
 
-    
+    def register_user(self):
+        '''
+        Function to register users
+        '''
+        User.user_list.append(self)
